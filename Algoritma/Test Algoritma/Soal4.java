@@ -1,14 +1,25 @@
-public class Soal2 {
+public class Soal4 {
     public static void main(String[] args) {
-        functionX(1,5,2);
+        printPrimeNumbers(1,100);
     }
-    public static void functionX(int a, int b, int c) {
-        
-        for (int i = a; i <= b; i += c) {
-            for (int j = i; j <= b; j++) {
-                System.out.print(j * 2 + " ");
+    public static void printPrimeNumbers(int start, int end) {
+        for (int i = start; i <= end; i++) {
+            if (isPrime(i)) {
+                System.out.print(i + " ");
             }
-            System.out.println();
         }
     }
+
+    public static boolean isPrime(int number) {
+        if (number <= 1) {
+            return false;
+        }
+        for (int i = 2; i < number; i++){
+            if (number % i == 0){
+                return false;
+            }
+        }
+        return true;
+    }
+
 }

@@ -1,15 +1,14 @@
-public class Soal1 {
+public class Soal2 {
     public static void main(String[] args) {
-        int jumlahDeret = 5;
-        int nilaiAwal = 2;
-        int nilaiAkhir = nilaiAwal;
-
-        for (int i = 0; i < jumlahDeret; i++) {
-            nilaiAkhir += (int)(3 * Math.pow(4, i));
-            System.out.print(nilaiAkhir);
-            if (i < jumlahDeret - 1) {
-                System.out.print(", ");
+        functionX(1,10,2);
+    }
+    public static void functionX(int start, int end, int multiply) {
+        for (int i = start; i <= end; i++) {
+            for (int j = i; j <= end; j++) {
+                System.out.print(j * multiply + " ");
             }
+            System.out.println();
+            end--;
         }
     }
 }
